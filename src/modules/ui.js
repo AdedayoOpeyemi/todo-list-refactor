@@ -54,10 +54,7 @@ const displayTask = (task) => {
   thrashButton.classList.add('trashButton', 'd-none');
   thrashButton.innerHTML = '&#9986;';
 
-  taskHolder.appendChild(taskCheck);
-  taskHolder.appendChild(taskDescription);
-  taskHolder.appendChild(menuButton);
-  taskHolder.appendChild(thrashButton);
+  taskHolder.append(taskCheck, taskDescription, menuButton, thrashButton)
 
   taskListContainer.appendChild(taskHolder);
   addCheckBoxListener(task.index);
